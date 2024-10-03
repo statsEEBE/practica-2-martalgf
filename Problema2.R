@@ -15,6 +15,10 @@ m
 #b) Punto de corte eje recta de regresión
 b <- y_bar - m*x_bar
 b
+# Forma rápida de buscar pendiente y punto de corte
+mod <- lm(y~x) # m = Intercept y b = x
+mod
+summary(mod)
 #c) Buscar eñ valor de y cuando me dan x
 #Forma 1
 m*1.5+b #Uso la recta de regresión para encontrar y cuando me dan x
@@ -38,11 +42,4 @@ cor <- sqrt(Rsq) #Manera 1
 cor
 cor.test(x,y) #Manera 2
 
-# Forma rápida de buscar pendiente y punto de corte
-lm(y~x) # m = Intercept y b = x
-
-#mod
-mod <- lm(y~x)
-mod
-summary(mod)
 
